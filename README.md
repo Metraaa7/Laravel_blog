@@ -24,6 +24,6 @@ Admin page which access only for users who has an admin role:
 ![gitblog_4](https://github.com/Metraaa7/Laravel_blog/assets/114976507/3ddc9c1b-0f8f-473b-bf52-087ddd82fc88)
 ![gitblog_5](https://github.com/Metraaa7/Laravel_blog/assets/114976507/46f4646f-e764-4117-8681-d3c5bcd2ff95)
 ---
-Admin can do everything, create posts with tags and categories or change one part of posts or delete (softdelete) them and also create users or change role, email and so on 
+Admin can do everything, create posts with tags and categories or change one part of posts or delete (softdelete) them, he can also do it with concrete tag or category and also create users or change role, email and so on 
 
 
