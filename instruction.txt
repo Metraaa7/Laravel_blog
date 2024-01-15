@@ -1,0 +1,7 @@
+php artisan serve
+npm run dev
+php artisan queue:work
+
+put to public assets directory from edica
+put to public dist and plugins dirs from adminltepanel
+
