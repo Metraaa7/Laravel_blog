@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Edica :: Home</title>
+    <title>Edica</title>
     <link rel="stylesheet" href="{{asset('assets/vendors/flag-icon-css/css/flag-icon.min.css')}}">
     <link rel="stylesheet" href="{{asset('assets/vendors/font-awesome/css/all.min.css')}}">
     <link rel="stylesheet" href="{{asset('assets/vendors/aos/aos.css')}}">
@@ -16,8 +16,8 @@
 <div class="edica-loader"></div>
 <header class="edica-header">
     <div class="container">
-        <nav class="navbar navbar-expand-lg navbar-light">
-            <a class="navbar-brand" href="{{route('main.index')}}"><img src="{{asset('assets/images/logo.svg')}}" alt="Edica"></a>
+        <nav class="navbar navbar-expand-lg navbar-light d-flex align-items-center">
+            <a class="navbar-brand" href="{{route('main.index')}}"><img class="d-flex align-items-center" src="{{asset('assets/images/logo.svg')}}" alt="Edica"></a>
             <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#edicaMainNav" aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -34,20 +34,23 @@
                     </li>
                 </ul>
             </div>
-            <div class="collapse navbar-collapse mx-auto mt-2 mt-lg-0" id="edicaMainNav">
+            <div class="collapse navbar-collapse mx-auto mt-2 mt-lg-0 justify-content-end" id="edicaMainNav">
                 @if (Route::has('login'))
                     <div class="sm:fixed sm:top-0 sm:right-0 p-6 text-right z-10">
                         @auth
-                            <div class="d-flex align-items-center">
-                                <a class="btn btn-outline-info mr-3" href="{{ route('admin.main') }}">Become a creator</a>
-                                <a class="btn btn-outline-primary mr-3" href="{{ route('personal.main') }}">Personal acc</a>
+                            <div class="menu-xml d-flex align-items-center">
+{{--                                <a class="btn btn-dd btn-outline-info mr-3" href="{{ route('admin.main') }}">Posting</a>--}}
+{{--                                <a class="btn btn-dd  btn-outline-primary mr-3" href="{{ route('personal.main') }}">Profile</a>--}}
 
-                                <div class="collapse navbar-collapse" id="edicaMainNav">
-                                    <ul class="navbar-nav mx-auto mt-2 mt-lg-0">
+                                <div class="collapse navbar-collapse d-flex justify-content-between" id="edicaMainNav">
+                                    <a class="btn btn-outline-info mr-3" href="{{ route('admin.main') }}">Posting</a>
+                                    <a class="btn btn-outline-primary mr-3" href="{{ route('personal.main') }}">Profile</a>
+
+                                    <ul class="navbar-nav ml-auto mt-lg-0">
                                         <li class="nav-item">
                                             <form action="{{route('logout')}}" method="post">
                                                 @csrf
-                                                <input  class="btn btn-outline-danger" type="submit" value="Logout">
+                                                <input  class="btn btn-dd btn-outline-danger" type="submit" value="Logout">
                                             </form>
                                         </li>
                                     </ul>
@@ -120,19 +123,11 @@
                 </nav>
             </div>
             <div class="col-md-3">
-                <div class="dropdown footer-country-dropdown">
-                    <button class="btn btn-secondary dropdown-toggle" type="button" id="footerCountryDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <span class="flag-icon flag-icon-gb flag-icon-squared"></span> United Kingdom <i class="fas fa-chevron-down ml-2"></i>
-                    </button>
-                    <div class="dropdown-menu" aria-labelledby="footerCountryDropdown">
-                        <button class="dropdown-item" href="#">
-                            <span class="flag-icon flag-icon-us flag-icon-squared"></span> United States
-                        </button>
-                        <button class="dropdown-item" href="#">
-                            <span class="flag-icon flag-icon-au flag-icon-squared"></span> Australia
-                        </button>
-                    </div>
-                </div>
+                <nav class="footer-nav">
+                    <a href="#!" class="nav-link">Home</a>
+                    <a href="#!" class="nav-link">Category</a>
+                    <a href="#!" class="nav-link">About</a>
+                </nav>
             </div>
         </div>
         <div class="footer-bottom-content">

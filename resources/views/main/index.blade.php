@@ -38,7 +38,7 @@
                 @endforeach
             </div>
             <div class="row">
-                <div class="mx-auto" style="margin-top: -100px">
+                <div class="pt-3 pb-3 mx-auto" style="margin-top: -100px">
                     {{$posts->links()}}
                 </div>
             </div>

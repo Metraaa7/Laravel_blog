@@ -17,7 +17,7 @@ class AdminMiddleware
     public function handle(Request $request, Closure $next): Response
     {
        if ((int)auth()->user()->role !== User::ROLE_ADMIN) {
-           abort(404);
+           abort(404, 'Only admins can posting the posts');
        }
         return $next($request);
     }

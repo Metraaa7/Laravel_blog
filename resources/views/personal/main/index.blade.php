@@ -32,7 +32,7 @@
                         <div class="info-box-content">
                             <span class="info-box-text">Liked Posts</span>
                             <span class="info-box-number">
-                 1
+                 {{$data['likesCount']}}
                 </span>
                         </div>
                         <!-- /.info-box-content -->
@@ -46,7 +46,7 @@
 
                         <div class="info-box-content">
                             <span class="info-box-text">Commentaries</span>
-                            <span class="info-box-number">2</span>
+                            <span class="info-box-number">{{$data['commsCount']}}</span>
                         </div>
                     </div>
                 </div>
